@@ -16,7 +16,7 @@ import android.view.View
 private const val TAG = "AttitudeIndicator"
 private const val LOG_FPS = false
 
-class AttitudeIndicator @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
+class AltitudeIndicator @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private val mXfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
 

@@ -6,14 +6,14 @@ import android.support.v7.app.AppCompatActivity
 class MainActivity : AppCompatActivity(), Orientation.Listener {
 
     private lateinit var mOrientation: Orientation
-    private lateinit var mAttitudeIndicator: AttitudeIndicator
+    private lateinit var mAltitudeIndicator: AltitudeIndicator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
         mOrientation = Orientation(this)
-        mAttitudeIndicator = findViewById(R.id.attitude_indicator)
+        mAltitudeIndicator = findViewById(R.id.attitude_indicator)
     }
 
     override fun onStart() {
@@ -27,6 +27,6 @@ class MainActivity : AppCompatActivity(), Orientation.Listener {
     }
 
     override fun onOrientationChanged(pitch: Float, roll: Float) {
-        mAttitudeIndicator.setAttitude(pitch, roll)
+        mAltitudeIndicator.setAttitude(pitch, roll)
     }
 }
